@@ -46,7 +46,7 @@ class chg_consumer():
                 self.cursor.execute(upd_query, (first_name, last_name, dob, city, salary, emp_id))
                 print("Performed update on id ", emp_id)
             elif to_do_act == 'DELETE':
-                self.cursor.execute(del_query, (emp_id))
+                self.cursor.execute(del_query, (emp_id,))
                 print("Performed deletion on id ", emp_id)
             else:
                 print("Unknown action, please try again: ", to_do_act)
